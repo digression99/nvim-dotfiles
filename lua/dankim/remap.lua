@@ -22,14 +22,18 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- Separate the system clipboard from vim's clipboard.
 -- Use <leader>y to use system clipboard.
 -- use plus register.
-vim.keymap.set("n", "<leader>y", "\"+y")
-vim.keymap.set("v", "<leader>y", "\"+y")
-vim.keymap.set("n", "<leader>Y", "\"+Y")
+-- vim.keymap.set("n", "<leader>y", "\"+y")
+-- vim.keymap.set("v", "<leader>y", "\"+y")
+-- vim.keymap.set("n", "<leader>Y", "\"+Y")
 
 -- Delete to the void register, so
 -- deleting something doesn't contaminate the register.
-vim.keymap.set("n", "<leader>d", "\"_d")
-vim.keymap.set("v", "<leader>d", "\"_d")
+-- vim.keymap.set("n", "<leader>d", "\"_d")
+-- vim.keymap.set("v", "<leader>d", "\"_d")
+
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]])
+vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
 -- Windows only
 vim.keymap.set("n", "<leader>bv", "<C-v>")
@@ -38,13 +42,14 @@ vim.keymap.set("n", "<leader>bv", "<C-v>")
 -- vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- Capital Q for no operation. Why?
-vim.keymap.set("n", "Q", "<nop")
+vim.keymap.set("n", "Q", "<nop>")
 
 -- <C-f> for project-wise jump.
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- format the buffer.
 vim.keymap.set("n", "<leader>f", function()
+  print("Formatting...")
   vim.lsp.buf.format()
 end)
 

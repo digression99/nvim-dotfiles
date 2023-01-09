@@ -1,7 +1,14 @@
 # nvim configs
 
 * This configuration is based on ThePrimeagen's neovim basic setup youtube video.
+* https://github.com/ThePrimeagen/init.lua
 * Will continuously update plugins, keymaps, etc.
+
+## Prerequisite
+
+```
+sudo apt-get install ripgrep
+```
 
 ## keymaps
 

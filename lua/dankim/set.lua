@@ -5,6 +5,9 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
+-- system clipboard is not working in Windows.
+vim.opt.clipboard = 'unnamedplus'
+
 -- configures the default tab width.
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
