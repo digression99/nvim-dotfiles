@@ -6,3 +6,7 @@ end);
 vim.keymap.set("n", "<leader>gc", function()
 	vim.cmd.Git("commit")
 end);
+
+vim.keymap.set("n", "<leader>gl", function()
+	vim.cmd.Git("log")
+end);
