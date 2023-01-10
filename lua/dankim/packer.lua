@@ -1,7 +1,6 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
--- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
+-- Only required if you have packer configured as `opt`vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
@@ -69,7 +68,7 @@ return require('packer').startup(function(use)
   end }
 
   use {
-  "nvim-neo-tree/neo-tree.nvim",
+    "nvim-neo-tree/neo-tree.nvim",
     branch = "v2.x",
     requires = { 
       "nvim-lua/plenary.nvim",
@@ -80,5 +79,13 @@ return require('packer').startup(function(use)
       -- Unless you are still migrating, remove the deprecated commands from v1.x
       vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
     end
+  }
+
+  use {
+    "mattn/emmet-vim",
+    setup = function ()
+      vim.g.user_emmet_leader_key = '<c-z>'
+      vim.keymap.set('i', '<c-z>', '<c-z,')
+    end 
   }
 end)

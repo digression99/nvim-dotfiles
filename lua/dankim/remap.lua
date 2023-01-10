@@ -1,5 +1,3 @@
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-
 -- Moves the code around with visual mode.
 -- If the line is at the end of the file, it spits an error.
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -31,9 +29,9 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- vim.keymap.set("n", "<leader>d", "\"_d")
 -- vim.keymap.set("v", "<leader>d", "\"_d")
 
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- Windows only
 vim.keymap.set("n", "<leader>bv", "<C-v>")
@@ -45,6 +43,7 @@ vim.keymap.set("n", "<leader>bv", "<C-v>")
 vim.keymap.set("n", "Q", "<nop>")
 
 -- <C-f> for project-wise jump.
+-- Somehow not working...
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- format the buffer.
