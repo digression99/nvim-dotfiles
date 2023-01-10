@@ -1,11 +1,12 @@
 -- From astrovim
-require("toggleterm").setup{
+require("toggleterm").setup {
   size = 10,
-  -- open_mapping = [[<F7>]],
   -- If you enter 2<C-\>, you can open second terminal.
   open_mapping = [[<c-\>]], -- I follows the basic mapping.
   shading_factor = 2,
   direction = "horizontal",
+  autochdir = true,
+  auto_scroll = true,
   persist_mode = true, -- Should remember the previous terminal session.
   float_opts = {
     border = "curved",
