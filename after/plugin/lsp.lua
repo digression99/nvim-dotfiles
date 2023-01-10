@@ -23,11 +23,10 @@ lsp.setup_nvim_cmp({
   mapping = cmp_mappings
 })
 
---[[
- lsp.set_preferences({
-	sign_icons = {}
+lsp.set_preferences({
+  set_lsp_keymaps = false,
+  -- sign_icons = {}
 })
---]]
 
 lsp.on_attach(function(client, bufnr)
   local opts = { buffer = bufnr, remap = false }
