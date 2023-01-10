@@ -75,9 +75,13 @@ return require('packer').startup(function(use)
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim"
     },
+
     config = function()
       -- Unless you are still migrating, remove the deprecated commands from v1.x
       vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
+      require('neo-tree').setup({
+        hijack_netrw_behavior = "open_default"
+      })
     end
   }
 
@@ -85,12 +89,4 @@ return require('packer').startup(function(use)
     "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
   }
-
-  -- Don't use emmet-vim because of the freezing bug.
-  -- use {
-  --   "mattn/emmet-vim",
-  --   setup = function ()
-  --     vim.g.user_emmet_leader_key = '<c-z>'
-  --   end
-  -- }
 end)
