@@ -81,11 +81,11 @@ return require('packer').startup(function(use)
     end
   }
 
-  use {
-    "mattn/emmet-vim",
-    setup = function ()
-      vim.g.user_emmet_leader_key = '<c-z>'
-      vim.keymap.set('i', '<c-z>', '<c-z,')
-    end 
-  }
+  -- Don't use emmet-vim because of the freezing bug.
+  -- use {
+  --   "mattn/emmet-vim",
+  --   setup = function ()
+  --     vim.g.user_emmet_leader_key = '<c-z>'
+  --   end 
+  -- }
 end)

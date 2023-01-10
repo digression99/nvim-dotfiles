@@ -47,10 +47,10 @@ vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- format the buffer.
-vim.keymap.set("n", "<leader>f", function()
-  print("Formatting...")
-  vim.lsp.buf.format()
-end)
+-- vim.keymap.set("n", "<leader>f", function()
+--   print("Formatting...")
+--   vim.lsp.buf.format()
+-- end)
 
 -- quickfix list related.
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
