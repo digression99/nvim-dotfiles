@@ -40,9 +40,9 @@ return require('packer').startup(function(use)
     'VonHeikemen/lsp-zero.nvim',
     requires = {
       -- LSP Support
-      { 'neovim/nvim-lspconfig' },
       { 'williamboman/mason.nvim' },
       { 'williamboman/mason-lspconfig.nvim' },
+      { 'neovim/nvim-lspconfig' },
 
       -- Autocompletion
       { 'hrsh7th/nvim-cmp' },
@@ -97,6 +97,18 @@ return require('packer').startup(function(use)
       require("nvim-surround").setup({
         -- Configuration here, or leave empty to use defaults
       })
+    end
+  })
+
+  use({
+    'dart-lang/dart-vim-plugin',
+    requires = {
+      'natebosch/vim-lsc',
+      'natebosch/vim-lsc-dart'
+    },
+
+    config = function()
+      local lsc_auto_map = true
     end
   })
 end)
